@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div >
+    <h2 class="child" >Add New Movie</h2>
+    <form class="puthiyathu" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <input class="ali" type="text" name="name" placeholder="Movie Name"><br>
+        <input class="ali" type="text" name="desc" placeholder="Discription"><br>
+        <input class="ali" type="number" name="yr" placeholder="Year"><br>
+        <input class="ali" type="file" name="imge" ><br>
+        <input class="ali" type="submit">
+    </form>
+</div>
+{% endblock %}

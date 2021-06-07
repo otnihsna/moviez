@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{{movie.imge.url}}" alt="Card image">
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{movie.name}}</h5>
+    <p class="card-text">{{movie.desc}}</p>
+    <p class="card-text">{{movie.yr}}</p>
+      <a class="btn btn-warning" href="{% url 'movieapp:updatee' movie.id %}">Update</a><br><br>
+      <a class="btn btn-warning" href="{% url 'movieapp:deletee' movie.id %}">Delete</a>
+  </div>
+</div>
+
+
+
+
+<!--<img src="{{movie.imge.url}}" width="215" height="279.4"><br>-->
+<!--{{movie.name}}<br>-->
+<!--{{movie.desc}}<br>-->
+<!--{{movie.yr}}<br>-->
+
+{% endblock %}
